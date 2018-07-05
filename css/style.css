@@ -6,7 +6,7 @@ Medium green: #55c57a
 Dark green: #28b485
 
 */
-
+/* transform is a important property that allows cool and modern effects like to move around and rotate */
 * {
     margin: 0;
     padding: 0;
@@ -47,7 +47,10 @@ body {
 .logo {
     height: 35px;
 }
-
+/* when logo is hovered it move from right to left */
+/* .logo:hover{
+    animation: moveInRight 1s ease-out;
+} */
 .text-box{
     position: absolute;
     /* top and left are in relations to the parent element */
@@ -55,7 +58,8 @@ body {
     left: 50%;
     /* transform and translate makes the box no longer in relation with the parent element translate(-50% means half way from the right and then the 2nd 50% is half way from the top)*/
     /* transform translate is in relation to the element itself */
-    transform: translate(-50%, -50%)
+    transform: translate(-50%, -50%);
+    text-align: center;
 }
 
 .heading-primary {
@@ -63,6 +67,7 @@ body {
     text-transform: uppercase;
     /* stops the elements from shaking when finishing */
     backface-visibility: hidden;
+    margin-bottom: 60px;
 }
 
 .heading-primary-main {
@@ -129,4 +134,38 @@ body {
         opacity: 1;
         transform: translate(0)
     }
+}
+/* psuedo class */
+.btn:link,
+.btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    /* 15px top and bottom 40px left and right */
+    /* top, right, bottom, left */
+    /* NO COMMAS to seperate */
+    padding: 15px 40px;
+    /* do this to add padding or height to elements */
+    display: inline-block;
+    border-radius: 100px;
+    /* animated "all" properties  */
+    transition: all .2s;
+}
+
+.btn:hover{
+    /* (left)left to right negative - positve (right)*/
+    /* (right)right to left postive - negative (left)*/
+    /* (down)top to bottom positive - negative (up)*/
+    /* (up)bottom to top negative - positive (down)*/
+    transform: translateY(-3px);
+    /* x y blur color(cordinates) */
+    box-shadow: 0 5px 10px rgba(0,0,0,.2);
+}
+
+.btn:active{
+    transform: translate(-1px);
+}
+
+.btn-white {
+    background-color: #ffffff;
+    color: #777;
 }
