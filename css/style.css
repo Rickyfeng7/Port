@@ -1,0 +1,76 @@
+/*
+COLORS:
+
+Light green: #7ed56f
+Medium green: #55c57a
+Dark green: #28b485
+
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "lato", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #777;
+    padding: 30px; 
+    /* this padding will apply 30px padding around the entire body */ 
+}
+
+.header {
+    /* vh mean percent of view port height: 95 means 95% of the entire page and 100 = 100% */
+    height: 95vh;
+    /* "linear-gradient" allows the dev to put colors on top of the image and also coloring from "to right" which changes color from left to right : "to right bottom" makes the color from left to right bottom*/
+    background-image: linear-gradient(
+        to right bottom, 
+        hsla(111, 55%, 64%, 0.8), 
+        rgba(40, 180, 131, 0.8)),
+         url(../img/hero.jpg);
+    background-size: cover;
+    background-position: top;
+    position: relative;
+    /* new css property clip-path ('clock-wise top right, top left, bottom left, bottom right' x first then y)*/
+    clip-path:polygon(0 0, 100% 0, 100% 75vh, 0 100%)
+}
+
+.logo-box {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+}
+.logo {
+    height: 35px;
+}
+
+.text-box{
+    position: absolute;
+    /* top and left are in relations to the parent element */
+    top: 40%;
+    left: 50%;
+    /* transform and translate makes the box no longer in relation with the parent element translate(-50% means half way from the right and then the 2nd 50% is half way from the top)*/
+    /* transform translate is in relation to the element itself */
+    transform: translate(-50%, -50%)
+}
+
+.heading-primary {
+    color: #ffffff;
+    text-transform: uppercase;
+}
+.heading-primary-main {
+    display: block;
+    font-size: 60px;
+    font-weight: 400;
+    letter-spacing: 35px;
+}
+.heading-primary-sub {
+    display: block;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 17.4px;
+}
