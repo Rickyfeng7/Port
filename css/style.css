@@ -135,6 +135,16 @@ body {
         transform: translate(0)
     }
 }
+@keyframes moveInBottom{
+    0% {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0)
+    }
+}
 /* psuedo class */
 .btn:link,
 .btn:visited {
@@ -149,6 +159,7 @@ body {
     border-radius: 100px;
     /* animated "all" properties  */
     transition: all .2s;
+    position: relative;
 }
 
 .btn:hover{
@@ -168,4 +179,35 @@ body {
 .btn-white {
     background-color: #ffffff;
     color: #777;
+}
+/* ::after is how to type */
+.btn::after {
+    /* specificy content always could be empty */
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top:0;
+    left:0;
+    z-index: -1;
+    transition: all .4s;
+}
+
+.btn-white::after {
+    background-color: #fff;
+}
+/* scaleX() scales the x value */
+/* scaleY() sacles the y value */
+.btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
+
+.btn-animated{
+    /* animation name, duration, function and delay */
+    animation: moveInBottom .5s ease-out .75s;
+    /* apply the styles before the animation starts*/
+    animation-fill-mode: backwards;
 }
