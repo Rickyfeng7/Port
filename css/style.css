@@ -61,16 +61,72 @@ body {
 .heading-primary {
     color: #ffffff;
     text-transform: uppercase;
+    /* stops the elements from shaking when finishing */
+    backface-visibility: hidden;
 }
+
 .heading-primary-main {
     display: block;
     font-size: 60px;
     font-weight: 400;
     letter-spacing: 35px;
+    /* connecting the key frame to the elements */
+    animation-name: moveInLeft;
+    /* how long it takes to complete */
+    animation-duration: 1s;
+    /* ease-in starts slower then accelerate */
+    /* ease-out starts fast then slows down */
+    animation-timing-function: ease-out;
+    /* ATF = animation-timing-function */
+    /* can use cubic-bezier(0.1, 0.7, 1.0, 0.1) to make a custom ATF */
+    /* animation-iteration-count: 3; makes the animations happen 3 times*/
+    /* animation-delay: 3s; how to delay the elements */
+
 }
+
 .heading-primary-sub {
     display: block;
     font-size: 20px;
     font-weight: 700;
     letter-spacing: 17.4px;
+    animation: moveInRight 1s ease-out;
+}
+
+/* key frames are when the elements enter the page */
+/* each percent how complete the elements are so ie 50% is half way */
+/* only optimize the transform and opacity */
+
+@keyframes moveInLeft{
+    0% {
+        opacity: 0;
+        /* X is left(positive values) right(negative values)*/
+        /* Y is top down top(positive) bottom(negative)*/
+        transform: translateX(-100px)
+    }
+    /* 60% {
+        transform: rotate(-180deg)
+    } */
+    80% {
+        transform: translateX(20px)
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+@keyframes moveInRight{
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+
+    80% {
+        transform: translateX(-20px)
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0)
+    }
 }
