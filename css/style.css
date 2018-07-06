@@ -7,20 +7,29 @@ Dark green: #28b485
 
 */
 /* transform is a important property that allows cool and modern effects like to move around and rotate */
-* {
+/* the * means all or entire page */
+* ,
+*::after,
+*::before {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: inherit;
+}
+
+html {
+    /* never set a font-size with px and set it with percentage so if users changed the pixal they can zoome in and out to see the page */
+    font-size: 62.5%;
 }
 
 body {
     font-family: "lato", sans-serif;
     font-weight: 400;
-    font-size: 16px;
+    /* font-size: 16px; */
     line-height: 1.7;
     color: #777;
-    padding: 30px; 
+    padding: 3rem; 
     /* this padding will apply 30px padding around the entire body */ 
+    box-sizing: border-box;
 }
 
 .header {
@@ -39,19 +48,19 @@ body {
     clip-path:polygon(0 0, 100% 0, 100% 75vh, 0 100%)
 }
 
-.logo-box {
+.header__logo-box {
     position: absolute;
-    top: 40px;
-    left: 40px;
+    top: 4rem;
+    left: 4rem;
 }
-.logo {
-    height: 35px;
+.header__logo {
+    height: 3.5rem;
 }
 /* when logo is hovered it move from right to left */
 /* .logo:hover{
     animation: moveInRight 1s ease-out;
 } */
-.text-box{
+.header__text-box{
     position: absolute;
     /* top and left are in relations to the parent element */
     top: 40%;
@@ -67,14 +76,14 @@ body {
     text-transform: uppercase;
     /* stops the elements from shaking when finishing */
     backface-visibility: hidden;
-    margin-bottom: 60px;
+    margin-bottom: 6rem;
 }
 
-.heading-primary-main {
+.heading-primary--main {
     display: block;
-    font-size: 60px;
+    font-size: 6rem;
     font-weight: 400;
-    letter-spacing: 35px;
+    letter-spacing: 3.5rem;
     /* connecting the key frame to the elements */
     animation-name: moveInLeft;
     /* how long it takes to complete */
@@ -89,11 +98,11 @@ body {
 
 }
 
-.heading-primary-sub {
+.heading-primary--sub {
     display: block;
-    font-size: 20px;
+    font-size: 2rem;
     font-weight: 700;
-    letter-spacing: 17.4px;
+    letter-spacing: 1.75rem;
     animation: moveInRight 1s ease-out;
 }
 
@@ -106,13 +115,13 @@ body {
         opacity: 0;
         /* X is left(positive values) right(negative values)*/
         /* Y is top down top(positive) bottom(negative)*/
-        transform: translateX(-100px)
+        transform: translateX(-10rem)
     }
     /* 60% {
         transform: rotate(-180deg)
     } */
     80% {
-        transform: translateX(20px)
+        transform: translateX(2rem)
     }
 
     100% {
@@ -123,11 +132,11 @@ body {
 @keyframes moveInRight{
     0% {
         opacity: 0;
-        transform: translateX(100px);
+        transform: translateX(10rem);
     }
 
     80% {
-        transform: translateX(-20px)
+        transform: translateX(-2rem)
     }
 
     100% {
@@ -138,7 +147,7 @@ body {
 @keyframes moveInBottom{
     0% {
         opacity: 0;
-        transform: translateY(100px);
+        transform: translateY(10rem);
     }
     100% {
         opacity: 1;
@@ -153,13 +162,14 @@ body {
     /* 15px top and bottom 40px left and right */
     /* top, right, bottom, left */
     /* NO COMMAS to seperate */
-    padding: 15px 40px;
+    padding: 1.5rem 4rem;
     /* do this to add padding or height to elements */
     display: inline-block;
-    border-radius: 100px;
+    border-radius: 10rem;
     /* animated "all" properties  */
     transition: all .2s;
     position: relative;
+    font-size: 1.6rem
 }
 
 .btn:hover{
@@ -167,13 +177,13 @@ body {
     /* (right)right to left postive - negative (left)*/
     /* (down)top to bottom positive - negative (up)*/
     /* (up)bottom to top negative - positive (down)*/
-    transform: translateY(-3px);
+    transform: translateY(-0.3rem);
     /* x y blur color(cordinates) */
-    box-shadow: 0 5px 10px rgba(0,0,0,.2);
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.2);
 }
 
 .btn:active{
-    transform: translate(-1px);
+    transform: translate(-0.1rem);
 }
 
 .btn-white {
@@ -187,7 +197,7 @@ body {
     display: inline-block;
     height: 100%;
     width: 100%;
-    border-radius: 100px;
+    border-radius: 10rem;
     position: absolute;
     top:0;
     left:0;
@@ -205,7 +215,7 @@ body {
     opacity: 0;
 }
 
-.btn-animated{
+.btn--animated{
     /* animation name, duration, function and delay */
     animation: moveInBottom .5s ease-out .75s;
     /* apply the styles before the animation starts*/
