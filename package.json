@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Rickyfeng7/advcss/issues"
   },
-  "homepage": "https://github.com/Rickyfeng7/advcss#readme"
+  "homepage": "https://github.com/Rickyfeng7/advcss#readme",
+  "devDependencies": {
+    "node-sass": "^4.9.1"
+  }
 }
