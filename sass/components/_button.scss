@@ -1,0 +1,76 @@
+/* psuedo class */
+.btn{
+    &:link,
+    &:visited {
+        text-transform: uppercase;
+        text-decoration: none;
+        /* 15px top and bottom 40px left and right */
+        /* top, right, bottom, left */
+        /* NO COMMAS to seperate */
+        padding: 1.5rem 4rem;
+        /* do this to add padding or height to elements */
+        display: inline-block;
+        border-radius: 10rem;
+        /* animated "all" properties  */
+        transition: all .2s;
+        position: relative;
+        font-size: 1.6rem
+    }
+    
+    &:hover{
+        /* (left)left to right negative - positve (right)*/
+        /* (right)right to left postive - negative (left)*/
+        /* (down)top to bottom positive - negative (up)*/
+        /* (up)bottom to top negative - positive (down)*/
+        transform: translateY(-0.3rem);
+        /* x y blur color(cordinates) */
+        box-shadow: 0 .5rem 1rem rgba($color-black, .2);
+            /* scaleX() scales the x value */
+            /* scaleY() sacles the y value */
+        &::after {
+            transform: scaleX(1.4) scaleY(1.6);
+            opacity: 0;
+        }
+    }
+    
+    &:active{
+        transform: translate(-0.1rem);
+        box-shadow: 0 .5rem 1rem rgba($color-black, .2);
+    }
+    
+    &-white {
+        background-color: $color-white;
+        color: $color-gray-dark;
+        &::after {
+            background-color: $color-white;
+        }
+    }
+    /* ::after is how to type */
+    &::after {
+        /* specificy content always could be empty */
+        content: "";
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        border-radius: 10rem;
+        position: absolute;
+        top:0;
+        left:0;
+        z-index: -1;
+        transition: all .4s;
+    }
+    
+    /* scaleX() scales the x value */
+    /* scaleY() sacles the y value */
+    &::after {
+        transform: scaleX(1.4) scaleY(1.6);
+        opacity: 0;
+    }
+    
+    &--animated{
+        /* animation name, duration, function and delay */
+        animation: moveInBottom .5s ease-out .75s;
+        /* apply the styles before the animation starts*/
+        animation-fill-mode: backwards;
+    }
+}

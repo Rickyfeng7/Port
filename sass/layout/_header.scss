@@ -1,0 +1,39 @@
+.header {
+    /* vh mean percent of view port height: 95 means 95% of the entire page and 100 = 100% */
+    height: 95vh;
+    /* "linear-gradient" allows the dev to put colors on top of the image and also coloring from "to right" which changes color from left to right : "to right bottom" makes the color from left to right bottom*/
+    background-image: linear-gradient(
+        to right bottom, 
+        rgba($color-primary-light, 0.8), 
+        rgba($color-primary-dark, 0.8)),
+         url(../img/hero.jpg);
+    background-size: cover;
+    background-position: top;
+    position: relative;
+    /* new css property clip-path ('clock-wise top right, top left, bottom left, bottom right' x first then y)*/
+    clip-path:polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+
+    &__logo-box{
+        position: absolute;
+        top: 4rem;
+        left: 4rem;
+    }
+    &__logo {
+        height: 3.5rem;
+    }
+    /* .logo:hover{
+    animation: moveInRight 1s ease-out;
+    } */
+    &__text-box{
+        position: absolute;
+        /* top and left are in relations to the parent element */
+        top: 40%;
+        left: 50%;
+        /* transform and translate makes the box no longer in relation with the parent element translate(-50% means half way from the right and then the 2nd 50% is half way from the top)*/
+        /* transform translate is in relation to the element itself */
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+}
+
+

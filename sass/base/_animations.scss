@@ -1,0 +1,48 @@
+/* key frames are when the elements enter the page */
+/* each percent how complete the elements are so ie 50% is half way */
+/* only optimize the transform and opacity */
+
+@keyframes moveInLeft{
+    0% {
+        opacity: 0;
+        /* X is left(positive values) right(negative values)*/
+        /* Y is top down top(positive) bottom(negative)*/
+        transform: translateX(-10rem)
+    }
+    /* 60% {
+        transform: rotate(-180deg)
+    } */
+    80% {
+        transform: translateX(2rem)
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+@keyframes moveInRight{
+    0% {
+        opacity: 0;
+        transform: translateX(10rem);
+    }
+
+    80% {
+        transform: translateX(-2rem)
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0)
+    }
+}
+@keyframes moveInBottom{
+    0% {
+        opacity: 0;
+        transform: translateY(10rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0)
+    }
+}

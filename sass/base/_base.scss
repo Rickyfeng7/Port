@@ -1,0 +1,18 @@
+* ,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    /* never set a font-size with px and set it with percentage so if users changed the pixel they can zoome in and out to see the page */
+    // sets what 1rem would be 
+    font-size: 62.5%;
+}
+
+body {
+    /* this padding will apply 30px padding around the entire body */ 
+    box-sizing: border-box;
+}
