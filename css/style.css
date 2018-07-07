@@ -7,85 +7,6 @@ Dark green: #28b485
 */
 /* transform is a important property that allows cool and modern effects like to move around and rotate */
 /* the * means all or entire page */
-*,
-*::after,
-*::before {
-  margin: 0;
-  padding: 0;
-  box-sizing: inherit; }
-
-html {
-  /* never set a font-size with px and set it with percentage so if users changed the pixal they can zoome in and out to see the page */
-  font-size: 62.5%; }
-
-body {
-  font-family: "lato", sans-serif;
-  font-weight: 400;
-  /* font-size: 16px; */
-  line-height: 1.7;
-  color: #777;
-  padding: 3rem;
-  /* this padding will apply 30px padding around the entire body */
-  box-sizing: border-box; }
-
-.header {
-  /* vh mean percent of view port height: 95 means 95% of the entire page and 100 = 100% */
-  height: 95vh;
-  /* "linear-gradient" allows the dev to put colors on top of the image and also coloring from "to right" which changes color from left to right : "to right bottom" makes the color from left to right bottom*/
-  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg);
-  background-size: cover;
-  background-position: top;
-  position: relative;
-  /* new css property clip-path ('clock-wise top right, top left, bottom left, bottom right' x first then y)*/
-  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-  /* .logo:hover{
-    animation: moveInRight 1s ease-out;
-    } */ }
-  .header__logo-box {
-    position: absolute;
-    top: 4rem;
-    left: 4rem; }
-  .header__logo {
-    height: 3.5rem; }
-  .header__text-box {
-    position: absolute;
-    /* top and left are in relations to the parent element */
-    top: 40%;
-    left: 50%;
-    /* transform and translate makes the box no longer in relation with the parent element translate(-50% means half way from the right and then the 2nd 50% is half way from the top)*/
-    /* transform translate is in relation to the element itself */
-    transform: translate(-50%, -50%);
-    text-align: center; }
-
-.heading-primary {
-  color: #fff;
-  text-transform: uppercase;
-  /* stops the elements from shaking when finishing */
-  backface-visibility: hidden;
-  margin-bottom: 6rem; }
-  .heading-primary--main {
-    display: block;
-    font-size: 6rem;
-    font-weight: 400;
-    letter-spacing: 3.5rem;
-    /* connecting the key frame to the elements */
-    animation-name: moveInLeft;
-    /* how long it takes to complete */
-    animation-duration: 1s;
-    /* ease-in starts slower then accelerate */
-    /* ease-out starts fast then slows down */
-    animation-timing-function: ease-out;
-    /* ATF = animation-timing-function */
-    /* can use cubic-bezier(0.1, 0.7, 1.0, 0.1) to make a custom ATF */
-    /* animation-iteration-count: 3; makes the animations happen 3 times*/
-    /* animation-delay: 3s; how to delay the elements */ }
-  .heading-primary--sub {
-    display: block;
-    font-size: 2rem;
-    font-weight: 700;
-    letter-spacing: 1.75rem;
-    animation: moveInRight 1s ease-out; }
-
 /* key frames are when the elements enter the page */
 /* each percent how complete the elements are so ie 50% is half way */
 /* only optimize the transform and opacity */
@@ -121,6 +42,58 @@ body {
   100% {
     opacity: 1;
     transform: translate(0); } }
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  /* never set a font-size with px and set it with percentage so if users changed the pixel they can zoome in and out to see the page */
+  font-size: 62.5%; }
+
+body {
+  /* this padding will apply 30px padding around the entire body */
+  box-sizing: border-box; }
+
+body {
+  font-family: "lato", sans-serif;
+  font-weight: 400;
+  /* font-size: 16px; */
+  line-height: 1.7;
+  color: #777;
+  padding: 3rem; }
+
+.heading-primary {
+  color: #fff;
+  text-transform: uppercase;
+  /* stops the elements from shaking when finishing */
+  backface-visibility: hidden;
+  margin-bottom: 6rem; }
+  .heading-primary--main {
+    display: block;
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 3.5rem;
+    /* connecting the key frame to the elements */
+    animation-name: moveInLeft;
+    /* how long it takes to complete */
+    animation-duration: 1s;
+    /* ease-in starts slower then accelerate */
+    /* ease-out starts fast then slows down */
+    animation-timing-function: ease-out;
+    /* ATF = animation-timing-function */
+    /* can use cubic-bezier(0.1, 0.7, 1.0, 0.1) to make a custom ATF */
+    /* animation-iteration-count: 3; makes the animations happen 3 times*/
+    /* animation-delay: 3s; how to delay the elements */ }
+  .heading-primary--sub {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1.75rem;
+    animation: moveInRight 1s ease-out; }
 
 /* psuedo class */
 .btn {
@@ -182,3 +155,60 @@ body {
     animation: moveInBottom .5s ease-out .75s;
     /* apply the styles before the animation starts*/
     animation-fill-mode: backwards; }
+
+.row {
+  max-width: 114rem;
+  background-color: #eee;
+  margin: 0 auto; }
+  .row:not(:last-child) {
+    margin-bottom: 8rem; }
+  .row::after {
+    content: "";
+    display: table;
+    clear: both; }
+  .row [class^="col-"] {
+    background-color: orange;
+    float: left; }
+    .row [class^="col-"]:not(:last-child) {
+      margin-right: 6rem; }
+  .row .col-1-of-2 {
+    width: calc((100% - 6rem) / 2); }
+  .row .col-1-of-3 {
+    width: calc((100% - 2 * 6rem) / 3); }
+  .row .col-2-of-3 {
+    width: calc(2 * ((100% - 2 * 6rem)) / 3 + 6rem); }
+  .row .col-1-of-4 {
+    width: calc((100% - 3 * 6rem) / 4); }
+  .row .col-2-of-4 {
+    width: calc(2 * ((100% - 3 * 6rem) / 4) + 6rem); }
+  .row .col-3-of-4 {
+    width: calc(3 * ((100% - 3 * 6rem) / 4) + 2 * 6rem); }
+
+.header {
+  /* vh mean percent of view port height: 95 means 95% of the entire page and 100 = 100% */
+  height: 95vh;
+  /* "linear-gradient" allows the dev to put colors on top of the image and also coloring from "to right" which changes color from left to right : "to right bottom" makes the color from left to right bottom*/
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg);
+  background-size: cover;
+  background-position: top;
+  position: relative;
+  /* new css property clip-path ('clock-wise top right, top left, bottom left, bottom right' x first then y)*/
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  /* .logo:hover{
+    animation: moveInRight 1s ease-out;
+    } */ }
+  .header__logo-box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem; }
+  .header__logo {
+    height: 3.5rem; }
+  .header__text-box {
+    position: absolute;
+    /* top and left are in relations to the parent element */
+    top: 40%;
+    left: 50%;
+    /* transform and translate makes the box no longer in relation with the parent element translate(-50% means half way from the right and then the 2nd 50% is half way from the top)*/
+    /* transform translate is in relation to the element itself */
+    transform: translate(-50%, -50%);
+    text-align: center; }
