@@ -1,6 +1,5 @@
 .row {
     max-width: $grid-width;
-    background-color: #eee;
     margin: 0 auto;
     // applying the margin botton to all class but the last one 
     // margin-bottom: $gutter-vertical;
@@ -16,7 +15,6 @@
     // $ means ends'
     // inside the [] you can select any attribute
     [class^="col-"]{
-        background-color: orange;
         float: left;
 
         &:not(:last-child){

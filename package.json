@@ -4,7 +4,7 @@
   "description": "landing page",
   "main": "index.js",
   "scripts": {
-    "compile:sass":"node-sass sass/main.scss css/style.css -w"
+    "compile:sass": "node-sass sass/main.scss css/style.css -w"
   },
   "repository": {
     "type": "git",
@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/Rickyfeng7/advcss#readme",
   "devDependencies": {
-    "node-sass": "^4.9.1"
-  }
+    "node-sass": "^4.9.2"
+  },
+  "keywords": []
 }
-
