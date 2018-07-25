@@ -38,11 +38,18 @@
         box-shadow: 0 .5rem 1rem rgba($color-black, .2);
     }
     
-    &-white {
+    &--white {
         background-color: $color-white;
         color: $color-gray-dark;
         &::after {
             background-color: $color-white;
+        }
+    }
+    &--green {
+        background-color: $color-primary;
+        color: $color-gray-dark;
+        &::after {
+            background-color: $color-primary;
         }
     }
     /* ::after is how to type */
