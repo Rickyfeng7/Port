@@ -24,11 +24,26 @@
         <div class="navigation__background">&nbsp;</div>
         <nav class="navigation__nav">
             <ul class="navigation__list">
-                <li class="navigation__item"><a href="#" class="navigation__link"><span>01</span>  About Natours</a></li>
-                <li class="navigation__item"><a href="#" class="navigation__link"><span>02</span>  Your Benfits</a></li>
-                <li class="navigation__item"><a href="#" class="navigation__link"><span>03</span>  Popular Tours</a></li>
-                <li class="navigation__item"><a href="#" class="navigation__link"><span>04</span>  Stories</a></li>
-                <li class="navigation__item"><a href="#" class="navigation__link"><span>05</span>  Book Now</a></li>
+                <li class="navigation__item">
+                    <a href="#" class="navigation__link">
+                        <span>01</span> About Natours</a>
+                </li>
+                <li class="navigation__item">
+                    <a href="#" class="navigation__link">
+                        <span>02</span> Your Benfits</a>
+                </li>
+                <li class="navigation__item">
+                    <a href="#" class="navigation__link">
+                        <span>03</span> Popular Tours</a>
+                </li>
+                <li class="navigation__item">
+                    <a href="#" class="navigation__link">
+                        <span>04</span> Stories</a>
+                </li>
+                <li class="navigation__item">
+                    <a href="#" class="navigation__link">
+                        <span>05</span> Book Now</a>
+                </li>
             </ul>
         </nav>
     </div>
@@ -167,7 +182,7 @@
                                     <p class="card__price-only">only</p>
                                     <p class="card__price-value">$297</p>
                                 </div>
-                                <a href="#" class="btn btn--white">Book Now!</a>
+                                <a href="#popup" class="btn btn--white">Book Now!</a>
                             </div>
                         </div>
                     </div>
@@ -199,7 +214,7 @@
                                     <p class="card__price-only">only</p>
                                     <p class="card__price-value">$497</p>
                                 </div>
-                                <a href="#" class="btn btn--white">Book Now!</a>
+                                <a href="#popup" class="btn btn--white">Book Now!</a>
                             </div>
                         </div>
                     </div>
@@ -231,7 +246,7 @@
                                     <p class="card__price-only">only</p>
                                     <p class="card__price-value">$897</p>
                                 </div>
-                                <a href="#" class="btn btn--white">Book Now!</a>
+                                <a href="#popup" class="btn btn--white">Book Now!</a>
                             </div>
                         </div>
                     </div>
@@ -244,10 +259,9 @@
         </section>
         <section class="section-stories">
             <div class="bg-video">
-                <video class="bg-video__content" autoplay  muted loop>
+                <video class="bg-video__content" autoplay muted loop>
                     <source src="img/video.mp4" type="video/mp4">
-                    <source src="img/video.webm" type="video/webm">
-                    Your Browser is not spported! Sorry!
+                    <source src="img/video.webm" type="video/webm"> Your Browser is not spported! Sorry!
                 </video>
             </div>
             <div class="u-center-text u-margin-botton-big">
@@ -354,11 +368,21 @@
             <div class="col-1-of-2">
                 <div class="footer__navigation">
                     <ul class="footer__list">
-                        <li class="footer__item"><a href="#" class="footer__link">Company</a></li>
-                        <li class="footer__item"><a href="#" class="footer__link">Contact Us</a></li>
-                        <li class="footer__item"><a href="#" class="footer__link">Careers</a></li>
-                        <li class="footer__item"><a href="#" class="footer__link">Privacy Policy</a></li>
-                        <li class="footer__item"><a href="#" class="footer__link">Terms</a></li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">Company</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">Contact Us</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">Careers</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">Privacy Policy</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">Terms</a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -369,6 +393,27 @@
             </div>
         </div>
     </footer>
+    <div class="popup" id="popup">
+        <div class="popup__content">
+            <div class="popup__left">
+                <img src="img/nat-8.jpg" alt="Tour Photo" class="popup__img">
+                <img src="img/nat-9.jpg" alt="Tour Photo" class="popup__img">
+            </div>
+            <div class="popup__right">
+                <a href="#section-tours" class="popup__close">&times;</a>
+                <div class="heading-secondary u-margin-bottom-medium">Start Booking Now</div>
+                <h3 class="heading-tertiar u-margin-bottom-small">Important &ndash; Please read these terms before booking</h3>
+                <p class="popup__text">
+                    Bacon ipsum dolor amet fatback ball tip spare ribs strip steak. Ground round meatloaf strip steak hamburger bacon burgdoggen.
+                    Pastrami corned beef chicken, ball tip pig shoulder kevin t-bone meatball leberkas andouille ribeye spare
+                    ribs. Ham hock chicken turkey prosciutto biltong kielbasa hamburger turducken shank picanha. Turducken
+                    salami porchetta drumstick flank t-bone buffalo. Chicken burgdoggen bacon meatball fatback drumstick
+                    pancetta kielbasa beef. 
+                </p>
+                <a href="#" class="btn btn--green">Book Now</a>
+            </div>
+        </div>
+    </div>
     <!-- <section class="grid-test">
             <div class="row">
                 <div class="col-1-of-2">
