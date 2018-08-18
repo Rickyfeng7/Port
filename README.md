@@ -9,11 +9,11 @@
 
 [Come Check out the site](https://rickyfeng7.github.io/advcss/)
 
-# technology used
+# Technology used
 
 Only uses HTML, CSS and SASS
 
-# code snippets
+# Code snippets
 ## VERY IMPORTANT
 ```
   "scripts": {
