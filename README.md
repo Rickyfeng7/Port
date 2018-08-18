@@ -1,6 +1,9 @@
 # SCSS Project
 
-Building a project with SCSS, my own grid system, styling and special thanks to Jonas Schmedtmann
+- Building a project with SCSS
+- My own grid system 
+- Styling 
+- Special thanks to Jonas Schmedtmann
 
 # Link to the site
 
